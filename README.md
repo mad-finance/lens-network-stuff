@@ -8,9 +8,11 @@ Requires [foundry-zksync](https://docs.zksync.io/build/tooling/foundry/overview)
 
 ### Lens Sandbox
 
-Test Token: 0xf8a82068870e9488bf641ec4C1BDfd24A11D0a2c
-Test Token 2: 0xe07C87D9B4B0622383265dB460df7D8829fd90c0
-Test Token 3: 0x59A82594d4b72c1AE0AC9c721201A3B7e6AF8062
+Test Token: `0xf8a82068870e9488bf641ec4C1BDfd24A11D0a2c`
+
+Test Token 2: `0xe07C87D9B4B0622383265dB460df7D8829fd90c0`
+
+Test Token 3: `0x59A82594d4b72c1AE0AC9c721201A3B7e6AF8062`
 
 ## Foundry
 
