@@ -1,13 +1,34 @@
+# Lens Network Stuff
+
+Includes various utilities for interacting with Lens Network for Echo Fi.
+
+Requires [foundry-zksync](https://docs.zksync.io/build/tooling/foundry/overview) to run.
+
+## Deployments
+
+### Lens Sandbox
+
+Test Token: 0xf8a82068870e9488bf641ec4C1BDfd24A11D0a2c
+Test Token 2: 0xe07C87D9B4B0622383265dB460df7D8829fd90c0
+Test Token 3: 0x59A82594d4b72c1AE0AC9c721201A3B7e6AF8062
+
+# TODO:
+
+1. mint tokens to Carlos (0x28ff8e457feF9870B9d1529FE68Fbb95C3181f64)
+2. push repo to github
+3. link instructions to installing zksync foundry
+4. link this repo back from the deploy script repo integration section
+
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
 Foundry consists of:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
 ## Documentation
 
@@ -49,6 +70,12 @@ $ anvil
 
 ```shell
 $ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+
+# deploy token
+forge script script/Token.s.sol:Deploy --rpc-url https://sepolia.rpc.lens.dev -vvvv --zksync --legacy
+
+# mint token
+forge script script/Token.s.sol:Mint --rpc-url https://sepolia.rpc.lens.dev -vvvv --zksync --legacy
 ```
 
 ### Cast
