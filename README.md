@@ -12,13 +12,6 @@ Test Token: 0xf8a82068870e9488bf641ec4C1BDfd24A11D0a2c
 Test Token 2: 0xe07C87D9B4B0622383265dB460df7D8829fd90c0
 Test Token 3: 0x59A82594d4b72c1AE0AC9c721201A3B7e6AF8062
 
-# TODO:
-
-1. mint tokens to Carlos (0x28ff8e457feF9870B9d1529FE68Fbb95C3181f64)
-2. push repo to github
-3. link instructions to installing zksync foundry
-4. link this repo back from the deploy script repo integration section
-
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
