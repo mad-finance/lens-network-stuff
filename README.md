@@ -14,6 +14,11 @@ Test Token 2: `0xe07C87D9B4B0622383265dB460df7D8829fd90c0`
 
 Test Token 3: `0x59A82594d4b72c1AE0AC9c721201A3B7e6AF8062`
 
+## Rindexer
+Indexing service for univ3 `Swap` events. [Read more](rindexer/README.md)
+
+Make sure to set your custom webhook url in the yaml [rindexer/echorfi-rindexer-uni-v3/rindexer.yaml](rindexer/echorfi-rindexer-uni-v3/rindexer.yaml) and deploy the docker container
+
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
