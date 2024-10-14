@@ -1,0 +1,7 @@
+*
+
+node_modules/
+
+!Dockerfile
+!.dockerignore
+!echofi-rindexer-uni-v3

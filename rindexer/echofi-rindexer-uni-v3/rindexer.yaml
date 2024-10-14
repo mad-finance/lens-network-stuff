@@ -1,0 +1,58 @@
+name: echofi-rindexer-uni-v3
+project_type: no-code
+networks:
+  - name: lens-sepolia
+    chain_id: 37111
+    rpc: https://sepolia.rpc.lens.dev
+  - name: base
+    chain_id: 8453
+    rpc: ${BASE_RPC_URL}
+  - name: zksync
+    chain_id: 324
+    rpc: ${ZKSYNC_RPC_URL}
+storage:
+  postgres:
+    enabled: false
+contracts:
+  - name: UniswapV3Pool_base
+    details:
+      - network: base
+        filter:
+          event_name: Swap
+    abi: ./abis/UniswapV3Pool.abi.json
+    streams:
+      webhooks:
+      - endpoint: https://ahh3sqfq1d.execute-api.us-east-1.amazonaws.com/dev/echofi/webhook/swap
+        shared_secret: ${RINDEXER_WEBHOOK_SHARED_SECRET}
+        networks:
+          - base
+        events:
+          - event_name: Swap
+  - name: UniswapV3Pool_zksync
+    details:
+      - network: zksync
+        filter:
+          event_name: Swap
+    abi: ./abis/UniswapV3Pool.abi.json
+    streams:
+      webhooks:
+      - endpoint: https://ahh3sqfq1d.execute-api.us-east-1.amazonaws.com/dev/echofi/webhook/swap
+        shared_secret: ${RINDEXER_WEBHOOK_SHARED_SECRET}
+        networks:
+          - zksync
+        events:
+          - event_name: Swap
+  - name: UniswapV3Pool_lens-sepolia
+    details:
+      - network: lens-sepolia
+        filter:
+          event_name: Swap
+    abi: ./abis/UniswapV3Pool.abi.json
+    streams:
+      webhooks:
+      - endpoint: https://ahh3sqfq1d.execute-api.us-east-1.amazonaws.com/dev/echofi/webhook/swap
+        shared_secret: ${RINDEXER_WEBHOOK_SHARED_SECRET}
+        networks:
+          - lens-sepolia
+        events:
+          - event_name: Swap
